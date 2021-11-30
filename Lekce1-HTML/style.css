@@ -1,0 +1,81 @@
+p {
+    font-family: 'Inconsolata', courier;
+    font-size: 10px;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url("img/topography.png");
+    background-repeat: repeat;
+    padding: 10%;
+}
+.content {
+    font-size: 10px;
+}
+
+.menu
+ {
+    font-family: 'Josefin Sans', sans-serif;
+    background: #333333;
+    color: black;
+    padding: 1px;
+    display: flex;
+    list-style-type: none;
+ }
+
+ .bullets {
+    margin: 10px;
+    padding: 5px;  
+    font-size: 20px;
+ }
+
+.link
+{
+    color: #ff0099;
+}
+
+.logo {
+    width: 40px; 
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+    font-size: 2em;
+    padding: 0 0 0 0;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+    padding: 0 0 0 0;
+    color: #ff0099;
+    margin: 0 0 10px 0;
+}
+
+.quotes
+{
+    background-color: rgb(114, 10, 114);
+    padding: 5px;
+    font-size: 1em;
+    color: white;
+
+}
+
+
+.gallery {
+
+    display: inline-flexbox;
+}
+
+.small
+{
+   width: 20%;
+    height: auto;
+    padding: 10px;  
+
+}
+

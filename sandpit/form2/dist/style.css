@@ -1,0 +1,15 @@
+main {
+  display: block;
+  font-family: 'Baloo Thambi 2', bold;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+p {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}

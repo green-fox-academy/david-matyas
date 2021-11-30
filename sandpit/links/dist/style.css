@@ -1,0 +1,20 @@
+div {
+  display: block;
+}
+p {
+  margin: 10px;
+}
+a {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  color: #1a8b1b;
+}
+
+a:hover {
+  color: lime;
+  text-decoration: none;
+}
+
+a:active {
+  color: red;
+}

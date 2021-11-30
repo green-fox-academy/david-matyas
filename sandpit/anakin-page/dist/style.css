@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  text-align: left;
+  text-indent: 50px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+h1 {
+  position: absolute;
+  bottom: 0.5em;
+  left: 17%;
+  font-family: "Abril Fatface", cursive;
+  font-size: 4em;
+  margin: 0 -40px 0 0;
+  padding: 0 auto 0;
+  letter-spacing: 0.1em;
+  color: #222;
+}
+h2 {
+  position: absolute;
+  bottom: 5em;
+  left: 17%;
+  font-family: "Abril Fatface", cursive;
+  margin: 0 -20px 0 0;
+  font-size: 1.8em;
+  padding: 0 auto 0;
+  letter-spacing: 2px;
+  color: #222;
+}
+
+.content {
+  position: relative;
+  justify-content: center;
+  text-align: left;
+  text-indent: 10px;
+  margin: 0 auto;
+  width: 60%;
+}
+.content2 {
+  position: relative;
+  text-align: left;
+  text-indent: 10px;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.speech {
+  background: #444444;
+  font-family: "Abril Fatface", cursive;
+  font-size: 3em;
+  padding: 30px;
+  letter-spacing: 0px;
+  color: white;
+}
+
+.speech::after {
+  content: "❝";
+  font-size: 1.7em;
+  position: absolute;
+  left: 0%;
+  top: -15%;
+}
+p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #222;
+}
+.types {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2em;
+  line-height: 1;
+  color: #222;
+}
+.small {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #222;
+}
+.sub-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+ul {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 1em;
+  list-style-type: square;
+  list-style-position: inside;
+}
+hr {
+  border: 2px solid black;
+}

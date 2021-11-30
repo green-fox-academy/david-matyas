@@ -1,0 +1,71 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  background: purple;
+  margin: 0 auto;
+  padding: 2px;
+  height: 70px;
+  display: flex;
+}
+
+.nav:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0 100px;
+}
+.menu {
+  background: cyan;
+  width: 80px;
+  margin: 20px 15px 0px 0px;
+  height: 30px;
+  float: left;
+}
+.menu2 {
+  background: cyan;
+  width: 160px;
+  margin: 20px 15px 0px 0px;
+  height: 30px;
+  float: left;
+}
+
+.wrapper2 {
+  margin: 0 100px 0 100px;
+  padding: 2px;
+  display: flex;
+}
+
+.body {
+  display: flex;
+  float: left;
+  width: 100%;
+  height: 500px;
+  padding: 0px;
+  flex-direction: row;
+}
+
+.yellow {
+  background: yellow;
+  flex-grow: 4;
+}
+
+.lime {
+  flex-grow: 1;
+  background: lime;
+}
+
+.footer {
+  margin: 0 100px 0 100px;
+  padding: 0px;
+  flex-direction: row;
+}
+.grey {
+  width: 100%;
+  height: 80px;
+  background: lightgrey;
+}
