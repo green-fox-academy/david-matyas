@@ -20,9 +20,12 @@ public class ListIntroduction1 {
         names.add("Amanda");
         System.out.println(names.size());
         System.out.println(names.get(2)); // Print item on 3 position
- //       System.out.println("Print all names");
-        for (int i = 0; i < names.size(); i++) {
-            System.out.println(names.get(i));
+        //       System.out.println("Print all names");
+        for (String name : names) {
+            System.out.println(name);
+
+//            for (int i = 0; i < names.size(); i++) {
+//                System.out.println(names.get(i));
 
         }
         for (int i = 0; i < names.size(); i++) {
@@ -30,7 +33,7 @@ public class ListIntroduction1 {
 
         }
         names.remove(1);
-        for (int i = names.size()-1; i >= 0; i--) {
+        for (int i = names.size() - 1; i >= 0; i--) {
             System.out.println(names.get(i));
 
         }
