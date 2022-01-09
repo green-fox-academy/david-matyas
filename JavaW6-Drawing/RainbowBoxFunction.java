@@ -13,22 +13,27 @@ public class RainbowBoxFunction {
         // (the square size, the fill color and the graphics)
         // and draws a square of that size and color to the center of the canvas.
         // Create a loop that fills the canvas with rainbow colored squares (red, orange, yellow, green, blue, indigo, violet).
-        squareColor(10, 255, graphics);
+        squareColor(300, "#000000", graphics);
 //        graphics.setColor(new Color(255,0,0));
 //        graphics.fillRect(10,10,150 ,150);
     }
 
-    public static void squareColor(int size, int color, Graphics graphics) {
+    public static void squareColor(int size, String color, Graphics graphics) {
+
         ArrayList<String> colors= new ArrayList<String>();
-        colors.add("bax");
-     //   graphics.setColor(new Color(255,255,255));
-
-
-        for (int i = 0; i < colors.size(); i++) {
-            graphics.setColor(new Color(255,0,0));
-  //          graphics.setColor(Color.decode("RED"));
-            graphics.fillRect(10,10,size,size);
+        colors.add("#FF0000"); // Red
+        colors.add("#FFA500"); // Orange
+        colors.add("#FFFF00"); // Yellow
+        colors.add("#00FF00"); // Green
+        colors.add("#0000FF"); // Blue
+        colors.add("#4B0082"); // Indigo
+        colors.add("#8F00FF"); // Violet
+         for (int i = 0; i < colors.size(); i++) {
+            graphics.setColor(Color.decode(colors.get(i)));
+              graphics.fillRect((((WIDTH/2)-(size/2))+(size/colors.size())*i),(HEIGHT/2)-(size/2),size/colors.size(),size);
         }
+        graphics.setColor(Color.decode(color));
+        graphics.drawRect((WIDTH/2)-(size/2),(HEIGHT/2)-(size/2),size,size);
 
     }
 
