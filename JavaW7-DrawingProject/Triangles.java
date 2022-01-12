@@ -5,7 +5,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Triangles {
     public static void drawImage(Graphics graphics) {
-        int x = 1;
+        int x = 0;
         int y = HEIGHT;
         int size = 33;
         int angle = 60;
