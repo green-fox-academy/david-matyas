@@ -11,17 +11,16 @@ public class Triangles {
         int angle = 60;
         int counter = WIDTH / size;
         int rows = 0;
-        while(counter > 0) {
+        while (counter > 0) {
             for (int i = 0; i < counter; i++) {
                 DrawTriangles(x, y, size, graphics);
                 x += size;
             }
             rows++;
             counter = counter - 1;
-            x = (size/2) * rows;
+            x = (size / 2) * rows;
             y = y - (int) (size * Math.sin(Math.toRadians(angle)));
         }
-
     }
 
     public static void DrawTriangles(int x, int y, int size, Graphics graphics) {
@@ -41,7 +40,6 @@ public class Triangles {
             } else {
                 graphics.drawLine(xPoint[i], yPoint[i], xPoint[i + 1], yPoint[i + 1]);
             }
-
         }
     }
 
