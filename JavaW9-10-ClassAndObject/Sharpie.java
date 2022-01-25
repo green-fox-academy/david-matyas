@@ -12,4 +12,16 @@ public class Sharpie {
         System.out.println("Actual ink amount is " + inkAmount);
     }
 
+    public void setInkAmount(int inkAmount) {
+        this.inkAmount = inkAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Sharpie{" +
+                "color='" + color + '\'' +
+                ", width=" + width +
+                ", inkAmount=" + inkAmount +
+                '}';
+    }
 }

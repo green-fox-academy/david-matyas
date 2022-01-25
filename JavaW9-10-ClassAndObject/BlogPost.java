@@ -16,5 +16,12 @@ public class BlogPost {
         System.out.println("  • " + text);
         System.out.println();
     }
+
+    @Override
+    public String toString() {
+        return "BlogPost{" +
+                "authorName='" + authorName + '\'' +
+                '}';
+    }
 }
 
