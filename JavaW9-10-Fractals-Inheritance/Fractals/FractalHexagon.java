@@ -15,43 +15,23 @@ public class FractalHexagon {
         if (size < 5) {
             return;
         }
-        int xPointOut[] = new int[6];3
+        int xPointOut[] = new int[6];
         int yPointOut[] = new int[6];
         int xPoint[] = new int[6];
-        int yPoint[] = new int[6]; 
+        int yPoint[] = new int[6];
         int angle = 0;
         for (int i = 0; i < xPoint.length; i++, angle += 360 / 6) {
             xPointOut[i] = x + (int) (size * Math.cos(Math.toRadians(angle))); // point X
             yPointOut[i] = y + (int) (size * Math.sin(Math.toRadians(angle))); // point Y
-            xPoint[i] = x - (int) ((size/1.5) * Math.cos(Math.toRadians(angle)));
-            yPoint[i] = y - (int) ((size/1.5) * Math.sin(Math.toRadians(angle)));
-            graphics.setColor(Color.BLUE);
-//            graphics.fillOval(xPoint[i], yPoint[i], 4, 4);
-            graphics.setColor(Color.GREEN);
-//            graphics.fillOval(xPointOut[i], yPointOut[i], 4, 4);
-                  DrawHexagon(xPoint[i], yPoint[i], size / 3, graphics);
+            xPoint[i] = x - (int) ((size / 1.5) * Math.cos(Math.toRadians(angle)));
+            yPoint[i] = y - (int) ((size / 1.5) * Math.sin(Math.toRadians(angle)));
+            DrawHexagon(xPoint[i], yPoint[i], size / 3, graphics);
 
 
         }
-//        graphics.setColor(Color.WHITE);
-//        graphics.fillPolygon(xPoint, yPoint, xPoint.length);
-//        graphics.setColor(new Color((int)Math.floor(Math.random()*(256)), (int)Math.floor(Math.random()*(256)),
-        //               (int)Math.floor(Math.random()*(256))));
         graphics.setColor(Color.BLACK);
         graphics.drawPolygon(xPointOut, yPointOut, xPoint.length);
-        //       graphics.drawPolygon(xPoint, yPoint, xPoint.length);
-        //     DrawHexagon(xPoint[i], yPoint[i], size /2, graphics);
     }
-//
-//    public static void DrawHexagon(int[][] xyPoint, Graphics graphics) {
-//        int xPoint[] = new int[xyPoint.length];
-//        int yPoint[] = new int[xyPoint.length];
-//        for (int i = 0; i < xyPoint.length; i++) {
-//            xPoint[i] = xyPoint[i][0];
-//            yPoint[i] = xyPoint[i][1];
-//        }
-//        graphics.drawPolygon(xPoint, yPoint, xPoint.length - 1);
-//    }
 
 
     // Don't touch the code below
