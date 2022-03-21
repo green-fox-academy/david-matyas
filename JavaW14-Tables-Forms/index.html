@@ -1,0 +1,48 @@
+<!doctype html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Skoda</td>
+            <td>Kia</td>
+            <td>Honda</td>
+        </tr>
+
+    </table>
+</body>
+
+<form action="yes" method="post">
+    Username
+    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" required=""
+        id="id_username"><br>
+
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="male" checked><br>
+
+
+    <label for="female">Female</label>
+    <input type="radio" name="gender" value="female"><br>
+
+
+
+
+    <input type="radio" id="huey" name="drone" value="huey" checked>
+    <label for="huey">Huey</label>
+
+    <input type="radio" id="dewey" name="drone" value="dewey">
+    <label for="dewey">Dewey</label>
+
+
+
+    Password
+
+    <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+    <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+</html>

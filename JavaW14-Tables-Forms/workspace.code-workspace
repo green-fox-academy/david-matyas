@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\Lekce1-HTML"
+		},
+		{
+			"path": "..\\L1-blog"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Lekce1-HTML"
+	}
+}
