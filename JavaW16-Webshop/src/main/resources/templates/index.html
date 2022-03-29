@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My webshop</title>
+</head>
+<body>
+<header>
+    <h1 th:text="${welcomeString ?: 'Sorry welcomeString is not set'}">Hello on my great webshop</h1>
+</header>
+
+<section>
+    <p th:text="${items.size()}"></p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>On stock</th>
+        </tr>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.getName()}" ></td>
+            <td th:text="${item.getDescription()}" ></td>
+            <td th:text="${item.getPrice()}" ></td>
+            <td th:text="${item.getOnStock()}" ></td>
+        </tr>
+    </table>
+</section>
+
+</body>
+</html>
