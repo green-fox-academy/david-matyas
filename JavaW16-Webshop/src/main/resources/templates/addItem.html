@@ -5,13 +5,16 @@
     <title>Add new item</title>
 </head>
 <body>
-<form action="">
-    <input type="text" placeholder="Specify name">
+<form th:action="@{/addItem}" action="/addItem" method="post">
+    <input type="text" name="name" placeholder="Specify name">
     <br>
-    <textarea name="description" id="" cols="30" rows="10" placeholder="Specify description"></textarea>
+    <textarea name="description" id="" cols="30" rows="10" placeholder="Specify description">Description</textarea>
     <br>
-    <input type="number" placeholder="Specify price">
+    <input type="number" name="price"placeholder="Specify price">
     <br>
+    <input type="number" name="onStock"placeholder="Specify quantity on stock">
+    <br>
+    <button type="submit">Submit</button>
 </form>
 </body>
 </html>
