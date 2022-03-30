@@ -35,6 +35,7 @@ public class ShopItems {
     );
 
     public static List<WebShopItem> getItems() {
+    //    items.clear();
         return items;
     }
 
