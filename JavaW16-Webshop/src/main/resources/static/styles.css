@@ -1,4 +1,29 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Red Hat Mono', monospace;
+}
 th {
-    background-color: black;
-    color: aliceblue;
+    background-color: #62efff;
+    color: #000000;
+    padding: 20px;
+}
+td{
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    color: white;
+    padding: 10px;
+    margin:5px;
+    display: inline;
+    background: red;
+    border-radius: 5px;
 }
