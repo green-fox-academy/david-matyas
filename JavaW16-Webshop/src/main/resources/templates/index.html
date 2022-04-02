@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Red+Hat+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Red+Hat+Mono:wght@500&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" th:href="@{styles.css}">
     <title>My webshop</title>
 </head>
@@ -18,12 +19,17 @@
     <h3>Filter</h3>
     <nav>
         <ul>
-            <li>Only available</li>
-            <li>Cheapest first</li>
-            <li>Contain nike</li>
+            <li><a th:href="@{/(available=yes)}" class="menu">Only available</a></li>
+            <li><a th:href="@{/(cheapest=yes)}" class="menu">Cheapest first</a></li>
+            <li><a th:href="@{/(nike=yes)}" class="menu">Contain nike</a></li>
             <li>average stock</li>
             <li>Most expensive available</li>
+
         </ul>
+        <form th:action="@{/}" method="get">
+            <input type="text" name="search">
+            <button type="submit">Search</button>
+        </form>
     </nav>
     <a th:href="@{/addItem}" href="/addItem">Add item</a>
     <table th:if="${items.size()>0}">
