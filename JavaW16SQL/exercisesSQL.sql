@@ -129,7 +129,7 @@ from
 (SELECT 
     sum(movieAVG)/sum(before_1980) as oldMovies,sum(movieAVG)/sum(after_1980) newMovies
 FROM
-    (SELECT 
+    (SELECT
         a.mID,
             CASE
                 WHEN year < 1980 THEN 'before 1980'
