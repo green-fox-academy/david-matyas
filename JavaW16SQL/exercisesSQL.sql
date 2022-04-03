@@ -45,7 +45,7 @@ FROM
 WHERE
     ratingDate IS NULL;
 
--- Exercise 4
+-- Exercise 5
 SELECT 
     name, title, stars, ratingDate
 FROM
@@ -55,3 +55,31 @@ FROM
         LEFT JOIN
     Movie AS c ON b.mID = c.mID
 ORDER BY name , title , stars;
+
+-- Exercise 6 - For all cases where the same reviewer rated the same movie twice and gave it a higher rating the second time, return the reviewer’s name and the title of the movie.
+SELECT 
+    name, title
+FROM
+    (SELECT 
+        c.rID,
+            a.mID,
+            name,
+            title,
+            MAX(stars) maxStar,
+            MAX(ratingDate) maxDate,
+            COUNT(*) count
+    FROM
+        Movie AS a
+    LEFT JOIN Rating AS b ON a.mID = b.mID
+    LEFT JOIN Reviewer AS c ON b.rID = c.rID
+    GROUP BY c.rID , a.mID
+    ORDER BY name , ratingDate DESC) AS twice
+        JOIN
+    rating AS b ON twice.rID = b.rID AND maxStar = stars
+        AND maxDate = b.ratingDate
+WHERE
+    count > 1
+;
+
+
+
