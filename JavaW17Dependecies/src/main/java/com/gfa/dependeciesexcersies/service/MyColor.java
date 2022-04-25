@@ -1,9 +1,8 @@
 package com.gfa.dependeciesexcersies.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public interface MyColor {
-    public void printColor();
+    public void printColor(String color);
 }
