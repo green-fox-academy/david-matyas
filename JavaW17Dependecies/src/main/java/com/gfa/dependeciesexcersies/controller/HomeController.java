@@ -9,6 +9,4 @@ public class HomeController {
     public String getIndex(){
     return "index";
     }
-
-
 }
