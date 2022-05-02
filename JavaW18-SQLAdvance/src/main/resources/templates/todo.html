@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Todo List</title>
+</head>
+<body>
+<h1>My Todos</h1>
+<table borde="1">
+    <thead>
+    <tr>
+    <td>Title</td>
+    <td>Done</td>
+    <td>Urgent</td>
+    </tr>
+    </thead>
+    <tr th:each="todo : ${todos}" th:object="${todo}">
+        <td th:text="*{title}">Title</td>
+        <td th:text="*{done}">Done</td>
+        <td th:text="*{urgent}">Urgent</td>
+    </tr>
+</table>
+</body>
+</html>
