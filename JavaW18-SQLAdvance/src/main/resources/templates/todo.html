@@ -6,15 +6,17 @@
 </head>
 <body>
 <h1>My Todos</h1>
-<table borde="1">
+<table border="1">
     <thead>
     <tr>
+        <td>ID</td>
     <td>Title</td>
     <td>Done</td>
     <td>Urgent</td>
     </tr>
     </thead>
     <tr th:each="todo : ${todos}" th:object="${todo}">
+        <td th:text="*{id}">Id</td>
         <td th:text="*{title}">Title</td>
         <td th:text="*{done}">Done</td>
         <td th:text="*{urgent}">Urgent</td>
