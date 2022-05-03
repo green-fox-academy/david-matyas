@@ -14,9 +14,10 @@
     <thead>
     <tr>
         <td>ID</td>
-    <td>Title</td>
-    <td>Done</td>
-    <td>Urgent</td>
+        <td>Title</td>
+        <td>Done</td>
+        <td>Urgent</td>
+        <td>Delete</td>
     </tr>
     </thead>
     <tr th:each="todo : ${todos}" th:object="${todo}">
@@ -24,6 +25,7 @@
         <td th:text="*{title}">Title</td>
         <td th:text="*{done}">Done</td>
         <td th:text="*{urgent}">Urgent</td>
+        <td><a th:href="@{/{id}/delete(id=*{id})}">delete</a></td>
     </tr>
 </table>
 </body>

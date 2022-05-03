@@ -6,10 +6,7 @@ import com.example.mysqltodo.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -41,6 +38,12 @@ public class ToDoController {
     @PostMapping(value = "/newtodo")
     public String addTodo(@ModelAttribute Todo todo) {
         todoservice.addNew(todo);
+        return "redirect:/todo";
+    }
+
+    @GetMapping("/{id}/delete")
+    public String deleteTodo(@PathVariable Long id) {
+        todoservice.deleteTodo(id);
         return "redirect:/todo";
     }
 
