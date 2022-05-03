@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface TodoRepos extends JpaRepository <Todo, Long> {
 
-    List<Todo> findAll();
+   // List<Todo> findAll();
     List<Todo> findAllByDoneEquals(Boolean done);
+   // Todo findById(Long id);
 }
