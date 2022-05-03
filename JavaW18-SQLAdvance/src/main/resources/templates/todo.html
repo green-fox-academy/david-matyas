@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
     <title>Todo List</title>
 </head>
 <body>
 <h1>My Todos</h1>
 <ul>
     <li><a th:href="@{/todo/?done=false}" href="todo.html">Active</a></li>
+    <li><a th:href="@{/newtodo}" href="newtodo.html">Add new</a></li>
 </ul>
 <table border="1">
     <thead>

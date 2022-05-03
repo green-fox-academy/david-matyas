@@ -22,4 +22,8 @@ public class TodoServiceImpl implements TodoService {
         return todorepo.findAllByDoneEquals(done);
     }
 
+    @Override
+    public void addNew(Todo todo) {
+       todorepo.save(todo);
+    }
 }

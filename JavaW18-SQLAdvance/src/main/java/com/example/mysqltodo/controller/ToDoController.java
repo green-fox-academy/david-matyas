@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -15,31 +17,40 @@ import java.util.stream.Collectors;
 @Controller
 @RequiredArgsConstructor
 public class ToDoController {
-   // private final TodoRepos todorepo;
+    // private final TodoRepos todorepo;
     private final TodoService todoservice;
 
-    @GetMapping(value = "/todo", params = "done")
-            public String todoListActive(Model model,
-                                   @RequestParam boolean done)
-    {
-        model.addAttribute("todos",todoservice.findAllActive(done));
-        return "todo";
-    }
-
-
     @GetMapping(value = "/todo")
-    public String todoList(Model model)
-    {
-        model.addAttribute("todos",todoservice.findAll());
+    public String todoList(Model model) {
+        model.addAttribute("todos", todoservice.findAll());
         return "todo";
     }
 
-
-    @GetMapping("/todos2")
-    public List<String> listAll() {
-        return todoservice.findAll().stream()
-                .map(Todo::getTitle)
-                .collect(Collectors.toList());
+    @GetMapping(value = "/todo", params = "done")
+    public String todoListActive(Model model,
+                                 @RequestParam boolean done) {
+        model.addAttribute("todos", todoservice.findAllActive(done));
+        return "todo";
     }
+
+    @GetMapping(value = "/newtodo")
+    public String newTodoForm(@ModelAttribute Todo todo) {
+        return "newtodo";
+    }
+
+    @PostMapping(value = "/newtodo")
+    public String addTodo(@ModelAttribute Todo todo) {
+        todoservice.addNew(todo);
+        return "redirect:/todo";
+    }
+
+
+//
+//    @GetMapping("/todos2")
+//    public List<String> listAll() {
+//        return todoservice.findAll().stream()
+//                .map(Todo::getTitle)
+//                .collect(Collectors.toList());
+//    }
 
 }

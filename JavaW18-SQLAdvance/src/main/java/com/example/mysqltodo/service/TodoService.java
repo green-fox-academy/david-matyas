@@ -12,4 +12,5 @@ public interface TodoService {
 
     List<Todo> findAll();
     List<Todo> findAllActive(Boolean done);
+    public void addNew(Todo todo);
 }
