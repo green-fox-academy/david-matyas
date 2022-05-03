@@ -2,10 +2,12 @@ package com.example.mysqltodo.controller;
 
 import com.example.mysqltodo.model.Todo;
 import com.example.mysqltodo.repository.TodoRepos;
+import com.example.mysqltodo.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,19 +15,29 @@ import java.util.stream.Collectors;
 @Controller
 @RequiredArgsConstructor
 public class ToDoController {
-    private final TodoRepos todorepo;
+   // private final TodoRepos todorepo;
+    private final TodoService todoservice;
 
-    @GetMapping("/todo")
-            public String todoList(Model model)
+    @GetMapping(value = "/todo", params = "done")
+            public String todoListActive(Model model,
+                                   @RequestParam boolean done)
     {
-        model.addAttribute("todos",todorepo.findAll());
+        model.addAttribute("todos",todoservice.findAllActive(done));
+        return "todo";
+    }
+
+
+    @GetMapping(value = "/todo")
+    public String todoList(Model model)
+    {
+        model.addAttribute("todos",todoservice.findAll());
         return "todo";
     }
 
 
     @GetMapping("/todos2")
     public List<String> listAll() {
-        return todorepo.findAll().stream()
+        return todoservice.findAll().stream()
                 .map(Todo::getTitle)
                 .collect(Collectors.toList());
     }
