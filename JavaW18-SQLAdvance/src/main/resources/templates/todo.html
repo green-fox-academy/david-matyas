@@ -12,8 +12,9 @@
 
 </form>
 <ul>
-    <li><a th:href="@{/todo/?done=false}" href="todo.html">Active</a></li>
-    <li><a th:href="@{/newtodo}" href="newtodo.html">Add new</a></li>
+    <li><a th:href="@{/todo/?done=false}" href="todo.html">Active</a>
+        <a th:href="@{/todo/?done=true}" href="todo.html">Not active</a> </li>
+    <li><a th:href="@{/newtodo}" href="newtodo.html">Add new todo</a></li>
 </ul>
 <table border="1">
     <thead>
