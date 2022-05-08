@@ -1,6 +1,8 @@
 package com.example.mysqltodo;
 
+import com.example.mysqltodo.model.Assignee;
 import com.example.mysqltodo.model.Todo;
+import com.example.mysqltodo.repository.AssigneeRepo;
 import com.example.mysqltodo.repository.TodoRepos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -17,6 +19,7 @@ public class MySqlTodoApplication implements CommandLineRunner {
     }
 
     private final TodoRepos todorepos;
+    private final AssigneeRepo assigneerepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -29,5 +32,10 @@ public class MySqlTodoApplication implements CommandLineRunner {
 
         todorepos.save(todo);
         todorepos.save(todo1);
+
+        Assignee assignee1= new Assignee();
+        assignee1.setName("Petr");
+        assignee1.setEmail("test@rest.cz");
+        assigneerepo.save(assignee1);
     }
 }

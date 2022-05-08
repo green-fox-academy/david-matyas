@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1>My Todos</h1>
+<form th:action="@{/search}" action="" method="get">
+    <input type="text" name="search" id="search">
+    <button type="submit">search</button>
+
+</form>
 <ul>
     <li><a th:href="@{/todo/?done=false}" href="todo.html">Active</a></li>
     <li><a th:href="@{/newtodo}" href="newtodo.html">Add new</a></li>

@@ -17,6 +17,7 @@ public class TodoServiceImpl implements TodoService {
     public List<Todo> findAll() {
         return todorepo.findAll();
     }
+
     @Override
     public List<Todo> findAllActive(Boolean done) {
         return todorepo.findAllByDoneEquals(done);
@@ -24,7 +25,7 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public void addNew(Todo todo) {
-       todorepo.save(todo);
+        todorepo.save(todo);
     }
 
     @Override
@@ -41,4 +42,9 @@ public class TodoServiceImpl implements TodoService {
     public void updateTodo(Todo todo) {
         todorepo.save(todo);
     }
+
+//    @Override
+//    public List<Todo> searchInTitle(String search) {
+//      return todorepo.findAllByTitleContaining(search);
+//    }
 }

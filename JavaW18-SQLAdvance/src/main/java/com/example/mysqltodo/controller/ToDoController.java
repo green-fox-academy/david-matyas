@@ -13,11 +13,18 @@ public class ToDoController {
     // private final TodoRepos todorepo;
     private final TodoService todoservice;
 
-    @GetMapping(value = "/todo")
+    @GetMapping(value = {"/todo","/"})
     public String todoList(Model model) {
         model.addAttribute("todos", todoservice.findAll());
         return "todo";
     }
+
+//    @GetMapping(value = "/search")
+//    public String searchTodo(Model model,
+//                                 @RequestParam String search) {
+//        model.addAttribute("todos", todoservice.searchInTitle(search));
+//        return "todo";
+//    }
 
     @GetMapping(value = "/todo", params = "done")
     public String todoListActive(Model model,
