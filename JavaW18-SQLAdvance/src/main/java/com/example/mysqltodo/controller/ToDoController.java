@@ -19,12 +19,12 @@ public class ToDoController {
         return "todo";
     }
 
-//    @GetMapping(value = "/search")
-//    public String searchTodo(Model model,
-//                                 @RequestParam String search) {
-//        model.addAttribute("todos", todoservice.searchInTitle(search));
-//        return "todo";
-//    }
+    @GetMapping(value = "/search")
+    public String searchTodo(Model model,
+                                 @RequestParam String search) {
+        model.addAttribute("todos", todoservice.searchInTitle(search));
+        return "todo";
+    }
 
     @GetMapping(value = "/todo", params = "done")
     public String todoListActive(Model model,

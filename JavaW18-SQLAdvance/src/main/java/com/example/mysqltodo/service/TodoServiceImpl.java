@@ -43,8 +43,8 @@ public class TodoServiceImpl implements TodoService {
         todorepo.save(todo);
     }
 
-//    @Override
-//    public List<Todo> searchInTitle(String search) {
-//      return todorepo.findAllByTitleContaining(search);
-//    }
+    @Override
+    public List<Todo> searchInTitle(String search) {
+      return todorepo.findAllByTitleContaining(search);
+    }
 }

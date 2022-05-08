@@ -12,7 +12,6 @@ import java.util.List;
 public interface TodoRepos extends JpaRepository<Todo, Long> {
 
     List<Todo> findAllByDoneEquals(Boolean done);
-   // List<Todo> findAllByTitle(String search);
-   // List<Todo> findAllByTitleContaining(String search);
+    List<Todo> findAllByTitleContaining(@Param("") String search);
 
 }
